@@ -1,4 +1,4 @@
-PAGE: https://thresia-stefi.github.io/AlertU/front.html
+PAGE: {https://thresia-stefi.github.io/AlertU/front.html}
 
 #AlertU
 
