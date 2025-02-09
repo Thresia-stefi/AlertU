@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertU - Exams</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #00bfff;
+            color: white;
+        }
+
+        .navbar {
+            background-color: #0099cc;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .nav-button {
+            padding: 0.8rem 1.5rem;
+            border: 3px solid white;
+            border-radius: 10px;
+            background-color: #0099cc;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .exam-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .exam-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: 2px solid white;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+        }
+
+        .exam-info h3 {
+            margin: 0 0 0.5rem 0;
+        }
+
+        .exam-date {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+            margin-top: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        .has-exam {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+         
+        </div>
+    </nav>
+
+    <div class="exam-container">
+        <h1>Exam Schedule</h1>
+        <div class="exam-card">
+            <div class="exam-info">
+                <h3>Mathematics Final</h3>
+                <p>Topics: Calculus, Linear Algebra</p>
+                <p>Room: 302</p>
+            </div>
+            <div class="exam-date">
+                <p>Feb 15, 2025</p>
+                <p>9:00 AM</p>
+            </div>
+        </div>
+        <div class="exam-card">
+            <div class="exam-info">
+                <h3>Physics Mid-term</h3>
+                <p>Topics: Mechanics, Thermodynamics</p>
+                <p>Room: 201</p>
+            </div>
+            <div class="exam-date">
+                <p>Feb 20, 2025</p>
+                <p>10:30 AM</p>
+               
+                  
+            </div>
+        </div>    
+            <div class="exam-card">
+                <div class="exam-info">
+                    <h3>GATE Final</h3>
+                    <p>Topics: NETWORK THEORY,  Algebra</p>
+                    <p>Venue:Check your admit card</p>
+                </div>
+                <div class="exam-date">
+                    <p>Feb 23, 2025</p>
+                    <p>9:00 AM</p>
+                </div>
+            </div>         
+                <div class="exam-card">
+                    <div class="exam-info">
+                        <h3>SSC</h3>
+                        <p>Topics: Politics,History</p>
+                        <p>venue:check your admit card</p>
+                    </div>
+                    <div class="exam-date">
+                        <p>mar 20, 2025</p>
+                        <p>10:30 AM</p>
+                       
+                          
+                    </div>
+            </div>
+        </div>
+
+        <h2>February 2025</h2>
+        <div class="calendar-grid">
+            <div class="calendar-day">Mon</div>
+            <div class="calendar-day">Tue</div>
+            <div class="calendar-day">Wed</div>
+            <div class="calendar-day">Thu</div>
+            <div class="calendar-day">Fri</div>
+            <div class="calendar-day">Sat</div>
+            <div class="calendar-day">Sun</div>
+            <!-- Calendar days -->
+            <div class="calendar-day">1</div>
+            <div class="calendar-day">2</div>
+            <div class="calendar-day">3</div>
+            <div class="calendar-day">4</div>
+            <div class="calendar-day">5</div>
+            <div class="calendar-day">6</div>
+            <div class="calendar-day">7</div>
+            <div class="calendar-day">8</div>
+            <div class="calendar-day">9</div>
+            <div class="calendar-day">10</div>
+            <div class="calendar-day">11</div>
+            <div class="calendar-day">12</div>
+            <div class="calendar-day">13</div>
+            <div class="calendar-day">14</div>
+            <div class="calendar-day has-exam">15</div>
+            <div class="calendar-day">16</div>
+            <div class="calendar-day">17</div>
+            <div class="calendar-day">18</div>
+            <div class="calendar-day">19</div>
+            <div class="calendar-day has-exam">20</div>
+        </div>
+        <button onclick="goBack()">Go Back</button>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

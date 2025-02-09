@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertU - Interactive Help</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e90ff;
+            color: white;
+        }
+
+        .navbar {
+            background-color: #0066cc;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .nav-button {
+            padding: 0.8rem 1.5rem;
+            border: 3px solid white;
+            border-radius: 10px;
+            background-color: #0066cc;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .help-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 2px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .chat-window {
+            height: 300px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            overflow-y: auto;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+        }
+
+        .chat-input button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            border: 2px solid white;
+            background: #0066cc;
+            color: white;
+            cursor: pointer;
+        }
+
+        .session-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .session-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .book-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .book-image {
+            width: 120px;
+            height: 160px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+           
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Interactive Help Center</h1>
+        
+        <div class="help-grid">
+            <!-- Chat with Seniors Section -->
+            <div class="help-card">
+                <h2>Chat with Seniors</h2>
+                <div class="chat-window" id="chatWindow">
+                    <!-- Chat messages will appear here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message..." id="messageInput">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+
+            <!-- Alumni Sessions Section -->
+            <div class="help-card">
+                <h2>Upcoming Alumni Sessions</h2>
+                <ul class="session-list">
+                    <li class="session-item">
+                        <div>
+                            <h3>Career in Tech</h3>
+                            <p>By John Doe - Senior Developer at Google</p>
+                            <p>Date: Feb 15, 2025</p>
+                        </div>
+                        <button class="nav-button">Register</button>
+                    </li>
+                    <li class="session-item">
+                        <div>
+                            <h3>Graduate School Guide</h3>
+                            <p>By Jane Smith - PhD Student at MIT</p>
+                            <p>Date: Feb 20, 2025</p>
+                        </div>
+                        <button class="nav-button">Register</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Book Recommendations Section -->
+            <div class="help-card">
+                <h2>Recommended Books</h2>
+                <div class="book-list">
+                    <div class="book-card">
+                        <div class="book-image">Book Cover</div>
+                        <h3>Data Structures</h3>
+                        <p>By Robert Smith</p>
+                        <button class="nav-button">View Details</button>
+                    </div>
+                    <div class="book-card">
+                        <div class="book-image">Book Cover</div>
+                        <h3>Algorithm Design</h3>
+                        <p>By Sarah Johnson</p>
+                        <button class="nav-button">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button onclick="goBack()">Go Back</button>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+    </div>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const chatWindow = document.getElementById('chatWindow');
+            
+            if (input.value.trim() !== '') {
+                const message = document.createElement('p');
+                message.textContent = `You: ${input.value}`;
+                chatWindow.appendChild(message);
+                input.value = '';
+                
+                // Simulate response (in real implementation, this would connect to a backend)
+                setTimeout(() => {
+                    const response = document.createElement('p');
+                    response.textContent = `Senior: Thanks for your question! I'll help you with that.`;
+                    chatWindow.appendChild(response);
+                    chatWindow.scrollTop = chatWindow.scrollHeight;
+                }, 1000);
+            }
+        }
+
+        // Add event listener for Enter key in chat input
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>

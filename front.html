@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertU - Stay Informed, Stay Ahead</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .alert-preview {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .alert-preview:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                        </svg>
+                        <span class="ml-2 text-2xl font-bold text-blue-600">AlertU</span>
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <a href="#features" class="px-3 py-2 text-gray-700 hover:text-blue-600">Features</a>
+                    <a href="#alerts" class="px-3 py-2 text-gray-700 hover:text-blue-600">Alerts</a>
+                    <a href="#" class="ml-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white py-16">
+                <h1 class="text-5xl font-bold mb-6">Stay Informed, Stay Ahead</h1>
+                <p class="text-xl mb-8">Never miss important academic updates with AlertU's comprehensive notification system</p>
+                <a href="newhome.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Everything You Need to Stay Updated</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Class Schedule Alerts</h3>
+                    <p class="text-gray-600">Stay updated with your class schedules, changes, and cancellations in real-time.</p>
+                </div>
+
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Exam Updates</h3>
+                    <p class="text-gray-600">Get timely notifications about exam schedules, room assignments, and results.</p>
+                </div>
+
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Scholarship Alerts</h3>
+                    <p class="text-gray-600">Never miss scholarship opportunities with instant notifications about deadlines and requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert Preview Section -->
+    <section id="alerts" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Smart Alerts for Every Need</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="alert-preview bg-white p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">Registration Alert</h3>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Open</span>
+                    </div>
+                    <p class="text-gray-600 mb-2">Course registration for Fall 2025 is now open</p>
+                    <p class="text-sm text-gray-500">Period: Feb 15 - Mar 1, 2025</p>
+                </div>
+
+                <div class="alert-preview bg-white p-6 rounded-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">Exam Schedule</h3>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Important</span>
+                    </div>
+                    <p class="text-gray-600 mb-2">Final Examination: Database Management</p>
+                    <p class="text-sm text-gray-500">Date: March 15, 2025 | Venue: Main Hall</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Ready to Stay Updated?</h2>
+            <p class="text-xl text-white mb-8">Join AlertU today and never miss important academic updates</p>
+            <a href="#" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Sign Up Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="text-2xl font-bold">AlertU</h3>
+                    <p class="text-gray-400">Stay Informed, Stay Ahead</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-blue-400">About</a>
+                    <a href="#" class="hover:text-blue-400">Contact</a>
+                    <a href="#" class="hover:text-blue-400">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

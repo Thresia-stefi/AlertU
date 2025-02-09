@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertU - Home</title>
+    <style>
+        :root {
+            /* Default theme (Spring) */
+            --primary-color: #4CAF50;
+            --secondary-color: #81C784;
+            --accent-color: #FFD700;
+            --background-color: #F1F8E9;
+            --text-color: #333333;
+        }
+
+        /* Summer theme */
+        [data-theme="summer"] {
+            --primary-color: #FF8C00;
+            --secondary-color: #FFA500;
+            --accent-color: #FFD700;a
+            --background-color: #FFF3E0;
+            --text-color: #333333;
+        }
+
+        /* Fall theme */
+        [data-theme="fall"] {
+            --primary-color: #795548;
+            --secondary-color: #A1887F;
+            --accent-color: #FF5722;
+            --background-color: #EFEBE9;
+            --text-color: #333333;
+        }
+
+        /* Winter theme */
+        [data-theme="winter"] {
+            --primary-color: #1E88E5;
+            --secondary-color: #64B5F6;
+            --accent-color: #FFFFFF;
+            --background-color: #E3F2FD;
+            --text-color: #333333;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .news-ticker {
+            background-color: var(--secondary-color);
+            padding: 0.5rem 0;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-content {
+            white-space: nowrap;
+            animation: ticker 20s linear infinite;
+            display: inline-block;
+            padding-right: 100%;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-info {
+            line-height: 1.6;
+        }
+
+        .theme-switcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            border-radius: 15px;
+            font-size: 0.875rem;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body data-theme="spring">
+    <nav class="navbar">
+        <div class="nav-content">
+            <h1>AlertU</h1>
+            <div class="nav-menu">
+                <button type="button" onclick="window.location.href='newhome.html';">
+                    Home
+                </button>
+
+                <button type="button" onclick="window.location.href='exam.html';">
+                    Exams
+                </button>
+                <button type="button" onclick="window.location.href='syllabus.html';">
+                    Syllabus
+                </button>
+                <button type="button" onclick="window.location.href='inthelp.html';">
+                    Help
+                </button>
+                <button type="button" onclick="window.location.href='alerts.html';">
+                    Alert
+                </button>
+               
+            </div>
+        </div>
+    </nav>
+
+    <div class="news-ticker">
+        <div class="ticker-content">
+            🎓 Final Exam Schedule Released | 📚 Library Hours Extended for Finals Week | 🏆 University Sports Day on March 15 | 
+            💻 New Online Learning Resources Available | 🎭 Annual Cultural Fest Registration Open
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <h1>Welcome to AlertU</h1>
+            <p>Your one-stop destination for all university updates and announcements</p>
+        </section>
+
+        <div class="news-grid">
+            <div class="news-card">
+                <h3>Academic Updates</h3>
+                <p>Mid-semester examinations scheduled for March 2025. Check your exam timetable in the portal.</p>
+                <span class="badge">Important</span>
+            </div>
+
+            <div class="news-card">
+                <h3>Campus Events</h3>
+                <p>Join us for the Annual Tech Symposium 2025. Register now for exciting workshops and competitions.</p>
+                <span class="badge">Event</span>
+            </div>
+
+            <div class="news-card">
+                <h3>Facility Updates</h3>
+                <p>New computer lab opening in Building B. State-of-the-art facilities available for all students.</p>
+                <span class="badge">New</span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>📧 Email: admin@alertu.edu</p>
+                <p>📞 Phone: (555) 123-4567</p>
+                <p>📍 Address: 123 University Ave, Education City</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Faculty Contacts</h3>
+                <p>Dean of Students: (555) 123-4568</p>
+                <p>Academic Affairs: (555) 123-4569</p>
+                <p>Student Services: (555) 123-4570</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Quick Links</h3>
+                <p>Academic Calendar</p>
+                <p>Course Catalog</p>
+                <p>Student Portal</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="theme-switcher">
+        <select id="themeSelect" onchange="changeTheme(this.value)">
+            <option value="spring">Spring Theme</option>
+            <option value="summer">Summer Theme</option>
+            <option value="fall">Fall Theme</option>
+            <option value="winter">Winter Theme</option>
+        </select>
+    </div>
+
+    <script>
+        // Theme switching functionality
+        function changeTheme(theme) {
+            document.body.dataset.theme = theme;
+        }
+
+        // Automatically set theme based on season
+        function setSeasonalTheme() {
+            const month = new Date().getMonth();
+            let theme = 'spring';
+            
+            if (month >= 2 && month <= 4) theme = 'spring';
+            else if (month >= 5 && month <= 7) theme = 'summer';
+            else if (month >= 8 && month <= 10) theme = 'fall';
+            else theme = 'winter';
+            
+            document.body.dataset.theme = theme;
+            document.getElementById('themeSelect').value = theme;
+        }
+
+        // Initialize theme
+        setSeasonalTheme();
+
+        // Duplicate ticker content for smooth infinite scroll
+        const ticker = document.querySelector('.ticker-content');
+        ticker.innerHTML = ticker.innerHTML + ' | ' + ticker.innerHTML;
+    </script>
+</body>
+</html>
+
+
+
+
+
+

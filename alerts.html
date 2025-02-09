@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertU</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .alert-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            background: white;
+            transition: box-shadow 0.3s ease;
+        }
+        .alert-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+        .status-urgent {
+            background-color: #fee2e2;
+            color: #dc2626;
+        }
+        .status-new {
+            background-color: #d1fae5;
+            color: #059669;
+        }
+        .status-important {
+            background-color: #fef3c7;
+            color: #d97706;
+        }
+        .status-open {
+            background-color: #dbeafe;
+            color: #2563eb;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 p-6">
+    <header class="mb-8">
+        <h1 class="text-3xl font-bold text-blue-600">AlertU</h1>
+    </header>
+
+    <main class="space-y-8">
+        <!-- Class Alerts -->
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Class Alerts</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <div class="alert-card">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold">Next Class Reminder</h3>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Your next class is at 10:00 AM in Room 101</p>
+                        <p>Subject: Mathematics</p>
+                        <p>Time: 10:00 AM</p>
+                        <p>Venue: Room 101</p>
+                    </div>
+                </div>
+
+                <div class="alert-card">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold">Venue Changed</h3>
+                        </div>
+                        <span class="status-badge status-important">Important</span>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Physics class moved to Room 205</p>
+                        <p>Time: 2:00 PM</p>
+                        <p>Subject: Physics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exam Alerts -->
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Exam Alerts</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <div class="alert-card">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold">Final Examination</h3>
+                        </div>
+                        <span class="status-badge status-new">Upcoming</span>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Subject: Database Management</p>
+                        <p>Date: March 15, 2025</p>
+                        <p>Time: 9:00 AM</p>
+                        <p>Venue: Main Hall</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholarship Alerts -->
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Scholarship Alerts</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <div class="alert-card">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold">Merit Scholarship 2025</h3>
+                        </div>
+                        <span class="status-badge status-open">Open</span>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Deadline: March 30, 2025</p>
+                        <p>Eligibility: CGPA 3.5 or above</p>
+                        <p>Value: $5000</p>
+                    </div>
+                </div>
+
+                <div class="alert-card">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold">Research Grant</h3>
+                        </div>
+                        <span class="status-badge status-urgent">Urgent</span>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Deadline: Tomorrow</p>
+                        <p>Value: $2000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Alerts -->
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Registration Alerts</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <div class="alert-card">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold">Fall Semester 2025</h3>
+                        </div>
+                        <span class="status-badge status-open">Open</span>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Register for your courses before the deadline</p>
+                        <p>Period: Feb 15 - Mar 1, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Alerts -->
+        <section>
+            <h2 class="text-xl font-semibold mb-4">Result Alerts</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <div class="alert-card">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center space-x-2">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <h3 class="text-lg font-semibold">Fall Semester 2024</h3>
+                        </div>
+                        <span class="status-badge status-new">New</span>
+                    </div>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Final results have been published</p>
+                        <p>Published: Feb 8, 2025</p>
+                    </div>
+                </div>
+                <button onclick="goBack()">Go Back</button>
+
+                <script>
+                    function goBack() {
+                        window.history.back();
+                    }
+                </script>
+            </div>
+           
+        </section>
+    </main>
+</body>
+</html>
