@@ -1,3 +1,5 @@
+PAGE: https://thresia-stefi.github.io/AlertU/front.html
+
 #AlertU
 
 stay connected and informed with campus alert.Get real time updates on classes, teachers and campus events.Empowering students with critical information for successful academic journeys.
